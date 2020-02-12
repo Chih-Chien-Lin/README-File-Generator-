@@ -60,7 +60,7 @@ When preparing a report for stakeholders, it is important to have up-to-date inf
   - Usage
   - License
   - Contributing
-  - Tests
+  - Tests     
   - Questions
 
 - The generated README includes 1 badge that's specific to the repository.
