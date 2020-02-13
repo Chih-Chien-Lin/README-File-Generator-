@@ -9,13 +9,13 @@ inquirer
             message: "What is your Github user name?",
             name: "username"
 
-        }
+        },
         // Project title
-        // {
-        //     type: "input",
-        //     message: "what's your project title?",
-        //     name: "titile"
-        // },
+        {
+            type: "input",
+            message: "what's your project title?",
+            name: "title"
+        },
         // // Description
         // {
         //     type: "input",
@@ -52,13 +52,13 @@ inquirer
         //     message: "Any contributer?",
         //     name: "contributer"
         // },
-        // // Tests
+        // Tests
         // {
         //     type: "input",
         //     message: "test",
         //     name: "test"
         // },
-        // // Questions
+        // Questions
         // {
         //     type: "input",
         //     message: "Any question?",
@@ -70,8 +70,20 @@ inquirer
     .then(function (response) {
         //using JSON.stringify cuz object cannot read object, so we have to convert it to string to store it!!
         // fs.writeFile("userInput.txt",response[1].username,function(err){
+        console.log(response);
         console.log(response.username);
+
+        // Title section:
+        fs.writeFileSync("Readme.md",'#'+response.username+'\n',"utf8",function(err){
+            if(err) throw err;
+        })
+        // fs.appendFileSync("Readme.md",response.title,"utf8",function(err){
+        //     if(err) throw err;
+        // })
         // const storeInput = JSON.stringify(response);
-        // console.log(storInput);
+        // fs.appendFileSync(fileName, data,  'utf8',  function(err) {
+        //     if (err) {
+        //         return console.error(err);
+        //     }
     });
 //   });
