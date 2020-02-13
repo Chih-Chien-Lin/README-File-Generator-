@@ -70,7 +70,8 @@ inquirer
     .then(function (response) {
         //using JSON.stringify cuz object cannot read object, so we have to convert it to string to store it!!
         // fs.writeFile("userInput.txt",response[1].username,function(err){
-        const userName = 'My name is ${arya.first}!';
-        console.log(response);
+        console.log(response.username);
+        // const storeInput = JSON.stringify(response);
+        // console.log(storInput);
     });
 //   });
